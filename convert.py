@@ -4,10 +4,6 @@
 import sys
 import re
 
-# TODO:
-# - change output precision based on input precision
-# - support 6'1" format
-
 # The multiplier to turn meters into whatever
 mults = {
     "mm": 0.001,
@@ -23,7 +19,6 @@ aliases = {
     '"': "inches",
     "'": "feet",
     }
-
 
 
 def main():
@@ -42,5 +37,6 @@ def main():
     output = inputvalue * mults[inputunit] / mults[s2]
     print("{:,.2f}".format(output).rstrip('0').rstrip('.'))
 
+    
 if __name__ == '__main__':
     main()
